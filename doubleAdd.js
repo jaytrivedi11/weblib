@@ -1,8 +1,9 @@
-const add = require('./add');
+import { add } from './add.js';
 
-function doubleAdd(a, b) {
+export function doubleAdd(a, b) {
   const sum = add(a, b);
   return sum * 2;
 }
 
-module.exports = doubleAdd;
+// For browser global usage
+window.doubleAdd = doubleAdd;
